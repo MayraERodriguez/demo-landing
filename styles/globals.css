@@ -1,0 +1,293 @@
+:root {
+    --fondo: #0B1020;
+    --violeta: #6C5CE7;
+    --menta: #22d3a6;
+    --borde: #707b98;
+    --metrica: #2d313b;
+    --ba: rgba(34, 211, 166, 0.15);
+    --seg: #fff;
+    --tarjeta: rgba(30, 34, 48, 0.8);
+    --emph: #39307b;
+    --violeta-claro: #aea5f4;
+
+
+}
+
+body {
+
+    flex-wrap: wrap;
+    background: var(--fondo);
+    color: var(--seg);
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+        display: flex;
+        gap: 10px;
+    }
+
+    /*diseño del menú*/
+    nav {
+        a {
+            margin: 0 12px;
+            color: var(--borde);
+            text-decoration: none;
+        }
+    }
+}
+
+aside {
+    padding: 20px;
+    background: #131c38;
+    width: 325px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -500px;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            color: var(--borde);
+            text-decoration: none;
+        }
+
+    }
+}
+
+.btn-burger {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid var(--borde);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /*align-items: center; alinea en el eje de las x */
+    justify-content: center;
+    /*alinea en el eje de las y */
+
+    span {
+        width: 30px;
+        height: 3px;
+        background: var(--borde);
+
+    }
+}
+
+/*diseño de los botones principales*/
+.btn-emphasis {
+    padding: 15px 25px;
+    background: linear-gradient(90deg, var(--violeta), var(--violeta-claro));
+    border: 1px solid var(--violeta);
+    border-radius: 6px;
+    margin: 7px 5px;
+    color: var(--seg);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.btn-emphasis:hover {
+    background: var(--emph);
+
+}
+
+/*diseño de los botones secundarios*/
+.btn-secondary {
+    padding: 15px 25px;
+    border: 1px solid var(--borde);
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--seg);
+    cursor: pointer;
+
+    &:hover {
+        background: var(--seg);
+        color: var(--fondo);
+        border: 2.5px solid var(--borde);
+
+    }
+}
+
+.hero {
+
+    padding: 70px 50px;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: var(--borde);
+    }
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: var(--ba);
+    color: var(--menta);
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid var(--borde);
+}
+
+.metricas {
+    padding: 50px 20px;
+    border-top: 1px solid var(--metrica);
+    border-bottom: 1px solid var(--metrica);
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        strong {
+            font-size: 1.8rem;
+        }
+
+        em {
+            font-size: 1.3rem;
+            font-style: normal;
+            color: var(--borde);
+        }
+
+    }
+}
+
+.funciones {
+    padding: 30px 20px;
+
+    h2 {
+
+        text-align: center;
+
+    }
+
+    .card-container {
+        display: flex;
+        padding: 60px 60px;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        .card {
+
+            padding: 40px 20px;
+            border: 1px solid var(--borde);
+            border-radius: 12px;
+            background: var(--tarjeta);
+            width: 200px;
+
+            span {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--violeta);
+            }
+
+            h3 {
+                font-size: 1.9rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.2rem;
+                color: var(--borde);
+            }
+        }
+    }
+}
+
+footer {
+
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    small {
+        text-align: end;
+    }
+
+    .copy {
+
+        text-align: left;
+
+    }
+
+    .creador {
+        text-align: right;
+
+    }
+}
+
+/* Media Queries */
+
+@media (max-width:730px) {
+    header {
+        nav {
+            display: none;
+
+        }
+    }
+
+    .badge {
+         font-size: .8rem;
+    }
+
+    .card {
+        width: 100%;
+
+        span {
+            font-size: .9rem;
+
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--borde);
+        }
+    }
+
+    strong {
+        font-size: 1.6rem;
+    }
+
+    em {
+        font-size: 1.2rem;
+    }
+
+
+}
